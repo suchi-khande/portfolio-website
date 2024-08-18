@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(245, 245, 245);
+    width: 100%;
+}
+header {
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 70px;
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.7);
+    backdrop-filter: blur(20px);
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 100;
+}
+.name {
+    margin-left: 7%;
+}
+.container {
+    padding: 15px 7%;
+}
+nav ul li {
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a, .name {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+/*-------------hover(home, about, contact)---------------*/
+nav ul li a::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: rgb(51, 75, 211);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    opacity: 0;
+}
+nav ul li a:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 0 25px black;
+}
+nav ul li a:hover {
+    color: rgb(51, 75, 211);
+}
+.name:hover {
+    color: rgb(51, 75, 211);
+}
+/* ---------------------------------------------- */
+.Heading h1{
+    border-bottom: 1.5px solid rgb(134, 134, 134);
+    padding: 30px 0 30px 10px;
+    width: 85%;
+    margin: 80px auto 10px;
+    font-size: 50px;
+    font-family: Roboto light;
+    color: black;
+}
+.Heading h2 a{
+    text-decoration: none;
+    color: inherit;
+}
+.Heading h2{
+    font-family: Roboto thin;
+    font-size: 35px;
+    color: rgb(134, 134, 134);
+    padding: 30px 10px 30px 100px;
+    margin: 0 auto;
+    perspective: 200px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+.Heading h2:hover{
+    color: rgb(51, 75, 211);
+    transform: translateY(-10px);
+}  
+ 
+footer {
+    margin-top: 100px;
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+footer p {
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+}
+footer a {
+    color: rgb(51, 75, 211);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
